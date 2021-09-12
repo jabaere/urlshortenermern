@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Glory:ital,wght@1,300&family=Indie+Flower&family=Merienda:wght@700&display=swap');
+body {
+  margin: 0;
+  font-family: 'Glory', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
