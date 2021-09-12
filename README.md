@@ -11,7 +11,7 @@ to start run:
 ### `npm run startserver`
 
 ## LIVE DEMO
-# [`https://mernshortener.herokuapp.com/`]
+# `[Heroku App](https://mernshortener.herokuapp.com/)`
 
 
 
