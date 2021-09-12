@@ -107,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
         try {
           //index === json.shortUrls.length-1
   
-          const response = await axios.get("http://localhost:8000/api/shortUrls");
+          const response = await axios.get("/api/shortUrls");
           const json = await response.data
           console.log(json)
           let x = json.shortUrls.filter((item,index) => item.long === inputValue)

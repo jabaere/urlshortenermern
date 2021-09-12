@@ -154,7 +154,7 @@ const onSubmit = (e)=> {
           
     const configuration = {
       method: "post",
-      url: "http://localhost:8000/register",
+      url: "/register",
       data: {
         name,
         email,

@@ -112,7 +112,7 @@ const onSubmit = (e) => {
   // set configurations
   const configuration = {
     method: "post",
-    url: "http://localhost:8000/login",
+    url: "/login",
     data: {
       email,
       password,

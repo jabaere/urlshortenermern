@@ -7,7 +7,7 @@ import path from "path";
 import {Page404} from '../src/component/404'
 import {GetApi} from '../src/component/GetApi'
 //const regeneratorRuntime = require("regenerator-runtime");
-const PORT = process.env.PORT || 8000;;
+const PORT = process.env.PORT || 8080;;
 const connectDb = require('./connect');
 const app = express();
 const ShortUrl = require('../modals/shortUrl');
