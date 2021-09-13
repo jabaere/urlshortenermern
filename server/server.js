@@ -86,6 +86,35 @@ app.get('/logged', (req, res) => {
 }) 
 })
 
+app.get('/login', (req, res) => {
+  fs.readFile(path.resolve('./build/index.html'), 'utf8', (err, data) => {
+    if (err) {
+      console.error(err)
+      return res.status(500).send('An error occurred')
+    }
+    return res.send(
+      data.replace(
+        '<div id="root"></div>',
+        `<div id="root"><Loginn/></div>`
+      )
+    )
+}) 
+})
+app.get('/register', (req, res) => {
+  fs.readFile(path.resolve('./build/index.html'), 'utf8', (err, data) => {
+    if (err) {
+      console.error(err)
+      return res.status(500).send('An error occurred')
+    }
+    return res.send(
+      data.replace(
+        '<div id="root"></div>',
+        `<div id="root"><Register/></div>`
+      )
+    )
+}) 
+})
+
 //register endpoint
 app.post('/register', async function(req,res){
   
