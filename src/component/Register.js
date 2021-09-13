@@ -173,13 +173,13 @@ const onSubmit = (e)=> {
           setpasswordsMatch(true)
           setRegisteredEmail(false)
           setRegisteredName(false)
-          e.preventDefault()
+          
         }else if(result.status===400){
           
           setRegisteredEmail(true)
           setRegisteredName(false)
           setpasswordsMatch(false)
-          e.preventDefault();
+          
         }else if(result.status===402){
           setRegisteredName(true)
           setRegisteredEmail(false)
