@@ -1,5 +1,5 @@
 for hosting
 in package.json add
-"main": "server/index.js",
+"main": "server/index.js".
 
 GetApi base url change to `https://${window.location.hostname}/`
