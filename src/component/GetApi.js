@@ -88,19 +88,14 @@ const useStyles = makeStyles((theme) => ({
     const classes = useStyles();
     const{inputValue,takeInput,name2} = useContext(AppContext)
     const history = useHistory();
-
     const [ spinner, setSpinner ] = useState(true);
 
-    // It will be executed before rendering
+
   
     useEffect(() => {
       setTimeout(() => setSpinner(false), 1000)
     }, []);
   
-    // [] means like componentDidMount
-  
-    
-
     React.useEffect(() => {
       
     const apiData = async (props) => {
@@ -141,11 +136,11 @@ const useStyles = makeStyles((theme) => ({
 
       
     const handleCloseSnack = (event, reason) => {
-       if (reason === 'clickaway') {
-                return;
+      if (reason === 'clickaway') {
+       return;
     }
           
-            setOpenSnack(false);
+       setOpenSnack(false);
     };
 
             //modal
