@@ -135,7 +135,7 @@ export const LoggedUser = (props) => {
   const data =  ['For Web', 'For Battle','For Work','For Strength', 'For Freedom']
   let history = useHistory();
   useEffect(() => {
-    // set configurations for the API call here
+    // set configurations for the API call
     const configuration = {
       method: "get",
       url: `userdata/${name2}`,
@@ -149,8 +149,8 @@ export const LoggedUser = (props) => {
     // make the API call
     axios(configuration)
       .then((result) => {
-        // assign the message in our result to the message we initialized above
-       // console.log(result)
+        
+        // console.log(result)
         //console.log(result.data[0].name)
        
         setRegisteredUsername(result.data[0].name);
@@ -170,7 +170,7 @@ export const LoggedUser = (props) => {
    window.localStorage.setItem('globalName','')
    handleGlobalName('')
    // console.log('token removed')
-    // redirect user to the landing page
+    // redirect user to the home page
     history.push("/");
   }
  
