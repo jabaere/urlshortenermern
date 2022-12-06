@@ -5,7 +5,8 @@
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "startserver": "nodemon server/index.js"
+    "startserver": "nodemon server/index.js",
+    "start": "node server/index.js"
   },
   "dependencies": {
     "@babel/preset-env": "^7.14.7",
