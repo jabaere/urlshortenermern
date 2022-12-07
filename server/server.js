@@ -77,7 +77,7 @@ app.get('/logged', (req, res) => {
       console.error(err)
       return res.status(500).send('An error occurred')
     }
-    return res.send(
+    return res.status(200).send(
       data.replace(
         '<div id="root"></div>',
         `<div id="root"><LoggedUser/></div>`
@@ -92,7 +92,7 @@ app.get('/login', (req, res) => {
       console.error(err)
       return res.status(500).send('An error occurred')
     }
-    return res.send(
+    return res.status(200).send(
       data.replace(
         '<div id="root"></div>',
         `<div id="root"><Loginn/></div>`
@@ -106,7 +106,7 @@ app.get('/register', (req, res) => {
       console.error(err)
       return res.status(500).send('An error occurred')
     }
-    return res.send(
+    return res.status(200).send(
       data.replace(
         '<div id="root"></div>',
         `<div id="root"><Register/></div>`
@@ -254,7 +254,7 @@ app.get('/link', (req, res) => {
       console.error(err)
       return res.status(500).send('An error occurred')
     }
-    return res.send(
+    return res.status(200).send(
       data.replace(
         '<div id="root"></div>',
         `<div id="root"><GetApi/></div>`
@@ -298,12 +298,12 @@ app.get('/:shortUrl', async (req,res) => {
 })
 
 app.use(function(req, res) {
-  res.send('404: Page not Found', 404);
+  res.status(404).send('404: Page not Found');
 });
 
 // Handle 500
 app.use(function(error, req, res, next) {
-  res.send('500: Internal Server Error', 500);
+  res.status(500).send('500: Internal Server Error');
 });
 
 
